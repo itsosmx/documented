@@ -9,3 +9,4 @@ Platform to make you chat with your PDFs.
 - Tailwindcss
 - Prisma
 - Kinda Auth
+- Shadcn UI
