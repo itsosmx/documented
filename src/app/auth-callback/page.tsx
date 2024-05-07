@@ -9,11 +9,7 @@ export default function AuthCallback() {
 
   const origin = searchParams.get("origin") ?? "/";
 
-  const { data } = trpc.authCallback.useQuery(undefined, {
-    onSuccess: () => {
-      router.push(origin);
-    },
-  });
+  const { data } = trpc.authCallback.useQuery(undefined, {});
 
   return <div>AuthCallback</div>;
 }

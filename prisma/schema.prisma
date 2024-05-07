@@ -4,6 +4,8 @@
 // Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
 // Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
 
+// npx prisma db push
+
 generator client {
   provider = "prisma-client-js"
 }
@@ -14,10 +16,13 @@ datasource db {
 }
 
 model User {
-  id        String   @id
-  email     String   @unique
-  name      String?
-  password  String
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  id    String @id @unique
+  email String @unique
+  subscriptionId String? @unique
+  subscriptionPeriodEnd DateTime? 
+  subscriptionProductId String? 
+  subscriptionOrderId String? 
 }
+
+
+
